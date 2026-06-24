@@ -9,17 +9,16 @@
 }
 
 :root {
-    --gold: #D4AF37;
-    --burgundy: #8B0000;
-    --dark-burgundy: #660000;
-    --dark: #0D1117;
-    --darker: #010409;
-    --black: #000000;
+    --primary-blue: #1A3A52;
+    --light-blue: #2C5AA0;
+    --sky-blue: #0066CC;
+    --navy-blue: #0D1B2A;
     --white: #FFFFFF;
-    --light-gray: #E8E8E8;
-    --medium-gray: #A0A0A0;
-    --dark-gray: #5A5A5A;
-    --accent-gold: #FFD700;
+    --off-white: #F5F7FA;
+    --light-gray: #E8EEF5;
+    --medium-gray: #95A0A5;
+    --dark-gray: #4A5568;
+    --accent-blue: #0088FF;
 }
 
 html {
@@ -28,7 +27,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark);
+    background-color: var(--navy-blue);
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -47,11 +46,11 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    background: linear-gradient(90deg, var(--black) 0%, var(--dark) 100%);
+    background: linear-gradient(90deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
     padding: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
-    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.15);
+    border-bottom: 2px solid var(--accent-blue);
 }
 
 .nav-container {
@@ -64,13 +63,12 @@ body {
 .logo h1 {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 4px;
     font-weight: 700;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .nav-links {
@@ -81,7 +79,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--light-gray);
+    color: var(--off-white);
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
@@ -92,8 +90,8 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--gold);
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    color: var(--accent-blue);
+    text-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
 }
 
 .nav-links a::after {
@@ -103,7 +101,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(90deg, var(--accent-blue), var(--sky-blue));
     transition: width 0.3s ease;
 }
 
@@ -112,19 +110,19 @@ body {
 }
 
 .nav-btn {
-    background: linear-gradient(135deg, var(--burgundy), var(--dark-burgundy)) !important;
+    background: linear-gradient(135deg, var(--sky-blue), var(--accent-blue)) !important;
     color: var(--white) !important;
     padding: 10px 25px !important;
     border-radius: 50px !important;
     font-weight: 700 !important;
-    border: 1px solid var(--gold) !important;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3) !important;
+    border: 1px solid var(--accent-blue) !important;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
 .nav-btn:hover {
-    background: linear-gradient(135deg, var(--dark-burgundy), var(--burgundy)) !important;
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4) !important;
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue)) !important;
+    box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4) !important;
     transform: translateY(-2px) !important;
 }
 
@@ -137,10 +135,10 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(90deg, var(--accent-blue), var(--sky-blue));
     margin: 5px 0;
     transition: 0.3s;
-    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 8px rgba(0, 136, 255, 0.5);
 }
 
 /* ===========================
@@ -152,8 +150,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark-burgundy) 50%, var(--black) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="barber" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="15" fill="none" stroke="%23D4AF37" stroke-width="1" opacity="0.08"/><line x1="25" y1="10" x2="25" y2="40" stroke="%238B0000" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="1200" height="800" fill="%230D1117"/><rect width="1200" height="800" fill="url(%23barber)"/></svg>');
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--primary-blue) 50%, var(--navy-blue) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="barber" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="15" fill="none" stroke="%230088FF" stroke-width="1" opacity="0.08"/></pattern></defs><rect width="1200" height="800" fill="%230D1B2A"/><rect width="1200" height="800" fill="url(%23barber)"/></svg>');
     background-attachment: fixed;
     margin-top: 60px;
     position: relative;
@@ -167,8 +165,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 136, 255, 0.1) 0%, transparent 50%);
     z-index: 1;
 }
 
@@ -181,19 +179,18 @@ body {
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 5.5rem;
-    background: linear-gradient(180deg, var(--gold) 0%, var(--accent-gold) 100%);
+    background: linear-gradient(180deg, var(--accent-blue) 0%, var(--sky-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 15px;
     letter-spacing: 5px;
     font-weight: 700;
-    text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
 }
 
 .hero p {
     font-size: 1.6rem;
-    color: var(--light-gray);
+    color: var(--off-white);
     margin-bottom: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -202,7 +199,7 @@ body {
 
 .hero .subtitle {
     font-size: 1.1rem;
-    color: var(--accent-gold);
+    color: var(--accent-blue);
     margin-bottom: 50px;
     letter-spacing: 2px;
     font-weight: 600;
@@ -215,7 +212,7 @@ body {
 .btn {
     display: inline-block;
     padding: 14px 40px;
-    border: 2px solid var(--gold);
+    border: 2px solid var(--accent-blue);
     border-radius: 50px;
     font-weight: 700;
     cursor: pointer;
@@ -235,26 +232,22 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--burgundy), var(--dark-burgundy));
+    background: linear-gradient(90deg, var(--sky-blue), var(--accent-blue));
     z-index: -1;
     transition: left 0.4s ease;
 }
 
 .btn-gold {
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
-    color: var(--black);
-    border-color: var(--gold);
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-}
-
-.btn-gold::before {
-    background: linear-gradient(135deg, var(--accent-gold), var(--gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
+    color: var(--white);
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 20px rgba(0, 136, 255, 0.3);
 }
 
 .btn-gold:hover {
     color: var(--white);
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 136, 255, 0.5);
 }
 
 .btn-lg {
@@ -278,7 +271,7 @@ section {
 .section-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -292,7 +285,7 @@ section {
     display: block;
     width: 100px;
     height: 3px;
-    background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--burgundy));
+    background: linear-gradient(90deg, var(--sky-blue), var(--accent-blue), var(--sky-blue));
     margin: 20px auto 0;
     border-radius: 2px;
 }
@@ -310,7 +303,7 @@ section {
    =========================== */
 
 .about {
-    background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
     position: relative;
 }
 
@@ -321,7 +314,7 @@ section {
     right: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 136, 255, 0.08) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -342,21 +335,21 @@ section {
 .about-image img {
     width: 100%;
     max-width: 450px;
-    border: 3px solid var(--gold);
+    border: 3px solid var(--accent-blue);
     border-radius: 5px;
-    box-shadow: 0 20px 50px rgba(139, 0, 0, 0.3), 0 0 30px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.3), 0 0 30px rgba(0, 136, 255, 0.2);
     transition: all 0.4s ease;
 }
 
 .about-image img:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(139, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.4), 0 0 40px rgba(0, 136, 255, 0.3);
 }
 
 .about-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -365,7 +358,7 @@ section {
 }
 
 .about-content p {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     margin-bottom: 20px;
     line-height: 2;
     font-size: 0.98rem;
@@ -376,10 +369,10 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 50px;
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(212, 175, 55, 0.08));
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 136, 255, 0.08));
     padding: 40px;
     border-radius: 5px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(0, 136, 255, 0.2);
 }
 
 .stat {
@@ -389,7 +382,7 @@ section {
 
 .stat h3 {
     font-size: 2.8rem;
-    background: linear-gradient(135deg, var(--gold), var(--burgundy));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -398,7 +391,7 @@ section {
 }
 
 .stat p {
-    color: var(--light-gray);
+    color: var(--off-white);
     font-size: 0.95rem;
     margin: 0;
     text-transform: uppercase;
@@ -406,11 +399,69 @@ section {
 }
 
 /* ===========================
+   GALLERY SECTION
+   =========================== */
+
+.gallery {
+    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--navy-blue) 100%);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 3px solid var(--accent-blue);
+    height: 350px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.4), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.gallery-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 50px rgba(0, 136, 255, 0.3), 0 0 40px rgba(0, 102, 204, 0.2);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ===========================
    SERVICES SECTION
    =========================== */
 
 .services {
-    background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
 }
 
 .services-grid {
@@ -420,10 +471,10 @@ section {
 }
 
 .service-card {
-    background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(15, 20, 25, 0.8));
+    background: linear-gradient(135deg, rgba(26, 58, 82, 0.8), rgba(44, 90, 160, 0.6));
     padding: 45px 35px;
     text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(0, 136, 255, 0.2);
     border-radius: 5px;
     transition: all 0.4s ease;
     position: relative;
@@ -437,7 +488,7 @@ section {
     left: -100%;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--burgundy));
+    background: linear-gradient(90deg, var(--sky-blue), var(--accent-blue), var(--sky-blue));
     transition: left 0.6s ease;
 }
 
@@ -448,15 +499,15 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at 20% 50%, rgba(0, 136, 255, 0.05) 0%, transparent 70%);
     z-index: 0;
 }
 
 .service-card:hover {
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.15), rgba(212, 175, 55, 0.1));
-    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 136, 255, 0.1));
+    border-color: var(--accent-blue);
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2), 0 0 30px rgba(139, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 136, 255, 0.2), 0 0 30px rgba(0, 102, 204, 0.15);
 }
 
 .service-card:hover::before {
@@ -465,7 +516,7 @@ section {
 
 .service-icon {
     font-size: 3.5rem;
-    background: linear-gradient(135deg, var(--gold), var(--burgundy));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -491,7 +542,7 @@ section {
 
 .service-card .price {
     font-size: 1.8rem;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -502,7 +553,7 @@ section {
 }
 
 .service-card .description {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     font-size: 0.92rem;
     line-height: 1.9;
     position: relative;
@@ -514,7 +565,7 @@ section {
    =========================== */
 
 .team {
-    background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--navy-blue) 100%);
 }
 
 .team-grid {
@@ -538,28 +589,16 @@ section {
     max-width: 300px;
     height: 320px;
     object-fit: cover;
-    border: 3px solid var(--gold);
+    border: 3px solid var(--accent-blue);
     border-radius: 5px;
     margin-bottom: 25px;
-    box-shadow: 0 15px 40px rgba(139, 0, 0, 0.3), 0 0 25px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3), 0 0 25px rgba(0, 136, 255, 0.15);
     transition: all 0.4s ease;
     position: relative;
 }
 
-.team-card img::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
 .team-card:hover img {
-    box-shadow: 0 25px 50px rgba(139, 0, 0, 0.4), 0 0 35px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.4), 0 0 35px rgba(0, 136, 255, 0.25);
 }
 
 .team-card h3 {
@@ -571,7 +610,7 @@ section {
 }
 
 .team-card .title {
-    background: linear-gradient(90deg, var(--gold), var(--burgundy));
+    background: linear-gradient(90deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -583,78 +622,20 @@ section {
 }
 
 .team-card .bio {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     font-size: 0.88rem;
     line-height: 1.9;
     margin-bottom: 15px;
 }
 
 .team-card .years {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(139, 0, 0, 0.1));
-    color: var(--accent-gold);
+    background: linear-gradient(135deg, rgba(0, 136, 255, 0.1), rgba(0, 102, 204, 0.1));
+    color: var(--accent-blue);
     font-weight: 700;
     font-size: 0.88rem;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-/* ===========================
-   GALLERY SECTION
-   =========================== */
-
-.gallery {
-    background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 5px;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    border: 2px solid var(--gold);
-    height: 350px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
-}
-
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.4), transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 2;
-}
-
-.gallery-item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3), 0 0 40px rgba(139, 0, 0, 0.2);
-}
-
-.gallery-item:hover::before {
-    opacity: 1;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
+    border: 1px solid rgba(0, 136, 255, 0.3);
 }
 
 /* ===========================
@@ -662,7 +643,7 @@ section {
    =========================== */
 
 .testimonials {
-    background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
 }
 
 .testimonials-grid {
@@ -672,10 +653,10 @@ section {
 }
 
 .testimonial-card {
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(212, 175, 55, 0.08));
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 136, 255, 0.08));
     padding: 35px;
     border-radius: 5px;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(0, 136, 255, 0.25);
     transition: all 0.4s ease;
     position: relative;
 }
@@ -686,25 +667,25 @@ section {
     top: 15px;
     left: 20px;
     font-size: 3rem;
-    color: var(--gold);
+    color: var(--accent-blue);
     opacity: 0.3;
 }
 
 .testimonial-card:hover {
     transform: translateY(-8px);
-    border-color: var(--gold);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2), 0 0 25px rgba(139, 0, 0, 0.15);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 40px rgba(0, 136, 255, 0.2), 0 0 25px rgba(0, 102, 204, 0.15);
 }
 
 .testimonial-card .stars {
     font-size: 1.3rem;
-    color: var(--gold);
+    color: var(--accent-blue);
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
 
 .testimonial-card .review {
-    color: var(--light-gray);
+    color: var(--off-white);
     font-size: 0.95rem;
     line-height: 1.8;
     margin-bottom: 15px;
@@ -718,7 +699,7 @@ section {
 }
 
 .testimonial-card .date {
-    color: var(--accent-gold);
+    color: var(--accent-blue);
     font-size: 0.82rem;
     font-weight: 600;
 }
@@ -728,7 +709,7 @@ section {
    =========================== */
 
 .booking {
-    background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+    background: linear-gradient(180deg, var(--primary-blue) 0%, var(--navy-blue) 100%);
     position: relative;
 }
 
@@ -739,7 +720,7 @@ section {
     right: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
     transform: translateY(-50%);
 }
 
@@ -751,11 +732,11 @@ section {
 }
 
 .booking-form {
-    background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(15, 20, 25, 0.8));
+    background: linear-gradient(135deg, rgba(13, 27, 42, 0.8), rgba(26, 58, 82, 0.8));
     padding: 55px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(0, 136, 255, 0.3);
     border-radius: 5px;
-    box-shadow: 0 20px 50px rgba(139, 0, 0, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.2);
     backdrop-filter: blur(10px);
 }
 
@@ -772,7 +753,7 @@ section {
 }
 
 .form-group label {
-    background: linear-gradient(90deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(90deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -788,7 +769,7 @@ section {
 .form-group textarea {
     padding: 16px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(0, 136, 255, 0.3);
     border-radius: 5px;
     color: var(--white);
     font-family: inherit;
@@ -806,9 +787,9 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    background: rgba(212, 175, 55, 0.08);
-    border-color: var(--gold);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+    background: rgba(0, 136, 255, 0.08);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(0, 136, 255, 0.25);
 }
 
 .form-group textarea {
@@ -827,12 +808,12 @@ section {
 .booking-message {
     margin-top: 30px;
     padding: 25px;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
-    color: var(--black);
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
+    color: var(--navy-blue);
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 136, 255, 0.3);
 }
 
 /* ===========================
@@ -840,7 +821,7 @@ section {
    =========================== */
 
 .contact {
-    background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
 }
 
 .contact-grid {
@@ -851,10 +832,10 @@ section {
 }
 
 .contact-card {
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.12), rgba(212, 175, 55, 0.08));
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 136, 255, 0.08));
     padding: 45px;
     text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(0, 136, 255, 0.25);
     border-radius: 5px;
     transition: all 0.4s ease;
     position: relative;
@@ -868,7 +849,7 @@ section {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--burgundy));
+    background: linear-gradient(90deg, var(--sky-blue), var(--accent-blue), var(--sky-blue));
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.4s ease;
@@ -876,8 +857,8 @@ section {
 
 .contact-card:hover {
     transform: translateY(-8px);
-    border-color: var(--gold);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25), 0 0 30px rgba(139, 0, 0, 0.15);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 40px rgba(0, 136, 255, 0.25), 0 0 30px rgba(0, 102, 204, 0.15);
 }
 
 .contact-card:hover::before {
@@ -886,7 +867,7 @@ section {
 
 .contact-icon {
     font-size: 2.8rem;
-    background: linear-gradient(135deg, var(--gold), var(--burgundy));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -902,13 +883,13 @@ section {
 }
 
 .contact-card p {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     margin-bottom: 8px;
     font-size: 0.92rem;
 }
 
 .contact-detail {
-    color: var(--accent-gold);
+    color: var(--accent-blue);
     font-weight: 700;
     font-size: 0.88rem;
     margin-top: 10px;
@@ -917,26 +898,26 @@ section {
 .contact-link {
     display: inline-block;
     margin-top: 15px;
-    color: var(--gold);
+    color: var(--accent-blue);
     text-decoration: none;
     font-weight: 700;
     transition: all 0.3s ease;
     padding: 8px 20px;
-    border: 1px solid var(--gold);
+    border: 1px solid var(--accent-blue);
     border-radius: 20px;
 }
 
 .contact-link:hover {
-    background: var(--gold);
-    color: var(--black);
+    background: var(--accent-blue);
+    color: var(--navy-blue);
 }
 
 .map-section {
     margin-top: 60px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(139, 0, 0, 0.2);
-    border: 2px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.2);
+    border: 2px solid rgba(0, 136, 255, 0.25);
 }
 
 .map-section iframe {
@@ -949,9 +930,9 @@ section {
    =========================== */
 
 .footer {
-    background: linear-gradient(180deg, var(--black) 0%, var(--darker) 100%);
+    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
     padding: 70px 20px 25px;
-    border-top: 2px solid var(--gold);
+    border-top: 2px solid var(--accent-blue);
     position: relative;
 }
 
@@ -962,7 +943,7 @@ section {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
 }
 
 .footer-content {
@@ -974,7 +955,7 @@ section {
 
 .footer-section h4 {
     font-family: 'Playfair Display', serif;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -984,7 +965,7 @@ section {
 }
 
 .footer-section p {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     margin-bottom: 10px;
     font-size: 0.92rem;
     line-height: 1.8;
@@ -999,14 +980,14 @@ section {
 }
 
 .footer-section ul a {
-    color: var(--medium-gray);
+    color: var(--light-gray);
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 0.92rem;
 }
 
 .footer-section ul a:hover {
-    color: var(--gold);
+    color: var(--accent-blue);
     transform: translateX(5px);
 }
 
@@ -1022,25 +1003,25 @@ section {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(139, 0, 0, 0.1));
-    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, rgba(0, 136, 255, 0.1), rgba(0, 102, 204, 0.1));
+    border: 1px solid var(--accent-blue);
     border-radius: 50%;
-    color: var(--gold);
+    color: var(--accent-blue);
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background: linear-gradient(135deg, var(--gold), var(--burgundy));
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
     color: var(--white);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 136, 255, 0.3);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
-    color: var(--dark-gray);
+    border-top: 1px solid rgba(0, 136, 255, 0.15);
+    color: var(--medium-gray);
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
@@ -1055,8 +1036,8 @@ section {
     right: 30px;
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, var(--gold), var(--accent-gold));
-    color: var(--black);
+    background: linear-gradient(135deg, var(--accent-blue), var(--sky-blue));
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1066,14 +1047,14 @@ section {
     font-size: 20px;
     z-index: 999;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 136, 255, 0.4);
 }
 
 .back-to-top:hover {
-    background: linear-gradient(135deg, var(--burgundy), var(--dark-burgundy));
+    background: linear-gradient(135deg, var(--sky-blue), var(--accent-blue));
     color: var(--white);
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 12px 35px rgba(0, 136, 255, 0.5);
 }
 
 /* ===========================
@@ -1091,15 +1072,6 @@ section {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* ===========================
    RESPONSIVE DESIGN
    =========================== */
@@ -1113,18 +1085,6 @@ section {
         display: flex;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
     .hero {
         height: 60vh;
         margin-top: 50px;
@@ -1132,10 +1092,6 @@ section {
 
     .hero h1 {
         font-size: 2.8rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
     }
 
     section {
@@ -1161,78 +1117,27 @@ section {
 
     .form-row {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .form-group.full-width {
-        grid-column: span 1;
     }
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
 }
 
 @media (max-width: 480px) {
-    .logo h1 {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .nav-links a {
-        font-size: 10px;
-    }
-
     .hero h1 {
         font-size: 1.8rem;
-        letter-spacing: 2px;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .hero .subtitle {
-        font-size: 0.85rem;
     }
 
     .section-header h2 {
         font-size: 1.6rem;
     }
 
-    .service-card,
-    .team-card {
-        padding: 25px 15px;
-    }
-
     .booking-form {
         padding: 20px;
     }
 
-    .btn {
-        padding: 12px 25px;
-        font-size: 10px;
-    }
-
     .about-stats {
         grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .back-to-top {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 18px;
     }
 }
